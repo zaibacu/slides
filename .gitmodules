@@ -1,0 +1,3 @@
+[submodule "WebSlides"]
+	path = WebSlides
+	url = git@github.com:webslides/WebSlides.git

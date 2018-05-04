@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <title>PyconLT 2018: Journey into Monitoring</title>
+    <meta name="description" content="Presentation about monitoring by Šarūnas Navickas.">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="WebSlides/static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="WebSlides/static/css/svg-icons.css">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <main role="main">
+      <article id="webslides">
+
+        <section class="bg-primary aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h1>Journey into Monitoring</h1>
+            <p class="text-intro">Paradigms and Stacks</p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <!-- Problems with monitoring -->
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                <strong>Problems with Monitoring</strong>
+            </h2>
+          </div>
+        </section>
+        <section class="slide aligncenter">
+            <h3>
+                Nobody cares about it, until they actually need it
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                When they finally need it - they need it fast
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                Deceptively easy
+            </h3>
+        </section>
+
+        <!-- End of problems (nice try...)-->
+
+        <!-- Personal Info -->
+        <section class="bg-primary">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h1>Who am I?</h1>
+            <div class="flex-content">
+                <ul class="description">
+                    <li>
+                        <strong class="text-label">
+                            Name:
+                        </strong>
+                        Šarūnas Navickas
+                    </li>
+
+                    <li>
+                        <strong class="text-label">
+                            Position:
+                        </strong>
+                        Data Engineer
+                    </li>
+
+                    <li>
+                        <strong class="text-label">
+                            Company:
+                        </strong>
+                        TokenMill
+                    </li>
+
+                    <li>
+                        <strong class="text-label">
+                            Doing:
+                        </strong>
+                        Solving Financial Crime with NLP and Machine Learning
+                    </li>
+
+                    <li>
+                        <strong class="text-label">
+                            Languages:
+                        </strong>
+                        Python and Clojure
+                    </li>
+
+                    <li>
+                        <strong class="text-label">
+                            Follow me @:
+                        </strong>
+                        <a rel="external" href="https://twitter.com/zaibacu" title="Twitter">
+                                      <svg class="fa-twitter">
+                                        <use xlink:href="#fa-twitter"></use>
+                                      </svg>
+                                      <em>@zaibacu</em>
+                        </a>
+                        <a rel="external" href="https://github.com/zaibacu" title="Github">
+                                      <svg class="fa-github">
+                                        <use xlink:href="#fa-github"></use>
+                                      </svg>
+                                      <em>https://github.com/zaibacu</em>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- End of Personal Info -->
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #1</h2>
+            <figure>
+                <img src="images/Monitoring_01.png" alt="it1"/>
+            </figure>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #2</h2>
+            <figure>
+                <img src="images/Monitoring_02.png" alt="it2"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #3</h2>
+            <figure>
+                <img src="images/Monitoring_03.png" alt="it3"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #4</h2>
+            <figure>
+                <img src="images/Monitoring_04.png" alt="it4"/>
+            </figure>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #5</h2>
+            <figure>
+                <img src="images/Monitoring_05.png" alt="it5"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #6</h2>
+            <figure>
+                <img src="images/Monitoring_06.png" alt="it6"/>
+            </figure>
+        </section>
+
+        <section class="slides aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h2>Deadlock much?</h2>
+            <p class="text-intro">Back to the drawing board</p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #7</h2>
+            <figure>
+                <img src="images/Monitoring_07.png" alt="it7"/>
+            </figure>
+        </section>
+
+        <!-- Reactive Monitoring section -->
+
+        <section class="bg-primary aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h2>Reactive Monitoring</h2>
+            <p class="text-intro">
+                a.k.a. pull based monitoring<br />
+                a.k.a. blackbox monitoring
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                <strong>Problems with Reactive monitoring</strong>
+            </h2>
+          </div>
+        </section>
+        <section class="slide aligncenter">
+            <h3>
+                Each new service requires configuration change and restart
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                Single point of failure
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                Doesn't scale horizontally
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                You can measure availability, but not quality of service
+            </h3>
+        </section>
+
+        <!-- End of Reactive Monitoring -->
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap size-50">
+            <h2>Evolution going forward</h2>
+            <p class="text-intro">
+                Some clients are building their business on top of this API.
+                They are requesting SLAs.
+            </p>
+          </div>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap size-50">
+            <h2>
+                Lets assume that Developers finally decided to do some research
+            </h2>
+          </div>
+        </section>
+
+
+        <section class="slides">
+            <div class="wrap size-50">
+                <h2>Concept of Metric</h2>
+                <div class="flex-content">
+                    <ul class="description">
+                        <li>
+                            <strong class="text-label">
+                                Format:
+                            </strong>
+                            {namespace} {value} | {type}
+                        </li>
+                        <li>
+                            <strong class="text-label">
+                                Gauge:
+                            </strong>
+                            -  exact value at given time. Eg.: <br/>
+                            host_a.app.users.active 5|g
+                        </li>
+
+                        <li>
+                            <strong class="text-label">
+                                Counter:
+                            </strong>
+                            -  incremental value. Eg.: <br/>
+                            host_a.app.requests.count 10|c
+                        </li>
+
+                        <li>
+                            <strong class="text-label">
+                                Timer:
+                            </strong>
+                            -  time something took. Eg.: <br/>
+                            host_a.app.requests.duration 150|t
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Graphite</h2>
+            <figure>
+                <img src="images/Graphite Stack.png" alt="graphite"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Graphite Database (whisper)</h2>
+            <figure>
+                <img src="images/whisper_combined.png" alt="whisper"/>
+            </figure>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #8</h2>
+            <figure>
+                <img src="images/Monitoring_08.png" alt="it8"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #9</h2>
+            <figure>
+                <img src="images/Monitoring_09.png" alt="it9"/>
+            </figure>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+            <h2>Happily ever after... NOT</h2>
+            <figure>
+                <img src="images/grafana.png" alt="grafana"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #10</h2>
+            <figure>
+                <img src="images/Monitoring_10.png" alt="it10"/>
+            </figure>
+        </section>
+
+
+        <!-- Graphite vs ELK -->
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                <strong>Graphite vs ELK</strong>
+            </h2>
+          </div>
+        </section>
+        <section class="slide aligncenter">
+            <h3>
+                <strong>Graphite</strong> answers: <strong>IS</strong> app working correctly
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                <strong>ELK</strong> answers: <strong>WHY</strong> app isn't working correctly
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                Can any of these cover both cases?
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                <strong>Graphite</strong> - too much speculation on sparse data
+            </h3>
+        </section>
+
+
+        <section class="slide aligncenter">
+            <h2>ELK</h2>
+            <figure>
+                <img src="images/damn_high.jpg" alt="damn_high"/>
+            </figure>
+        </section>
+
+        <!-- End of Graphite vs ELK-->
+
+
+        <!-- Proactive Monitoring section -->
+
+        <section class="bg-primary aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50">
+            <h2>Proactive Monitoring</h2>
+            <p class="text-intro">
+                a.k.a. push based monitoring<br />
+                a.k.a. whitebox monitoring
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                <strong>Problems with Proactive monitoring</strong>
+            </h2>
+          </div>
+        </section>
+        <section class="slide aligncenter">
+            <h3>
+                Architecture gets too complex
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                Hard to wrap head around some of concepts
+            </h3>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                No easy way to govern
+            </h3>
+        </section>
+
+        <!-- End of Proactive Monitoring -->
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                Eventually company grew into large corporation... 
+            </h2>
+
+            <p>
+                Questions started appearing
+            </p>
+          </div>
+        </section>
+
+
+        <section class="slide aligncenter">
+            <h2>How much load can we handle?</h2>
+            <figure>
+                <img src="images/dunno.jpg" alt="dunno"/>
+            </figure>
+        </section>
+
+        <section class="slide aligncenter">
+            <h2>How much HW we need to buy to satisfy our needs for next year?</h2>
+            <figure>
+                <img src="images/dunno.jpg" alt="dunno"/>
+            </figure>
+        </section>
+
+        <section class="slide aligncenter">
+            <h2>Who's writting metrics?</h2>
+            <figure>
+                <img src="images/dunno.jpg" alt="dunno"/>
+            </figure>
+        </section>
+
+        <section class="slide aligncenter">
+            <figure>
+                <img src="images/Lebowski.jpg" alt="lebowski"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Trying to get best of both worlds</h2>
+            <figure>
+                <img src="images/prometheus.png" alt="prometheus"/>
+            </figure>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Iteration #11</h2>
+            <figure>
+                <img src="images/Monitoring_11.png" alt="it11"/>
+            </figure>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                How's that best of both worlds?
+            </h2>
+          </div>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                In general it's Reactive (pull based) monitoring
+            </h3>
+            <p class="text-intro">
+                Full control is given on what and when to monitor
+            </p>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                However, it atknowledges power of Proactive Monitoring
+            </h3>
+            <p class="text-intro">
+            From APP perspective it acts exaclty like Proactive monitoring - you're pushing data somewhere.<br />
+                It actually stores those metrics in RAM and waits till Prometheus reads them. Reset values on read.
+            </p>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                It even acknowledges StatsD protocol
+            </h3>
+            <p class="text-intro">
+                There's Prometheus service which acts just like StatsD from outside (receicing metrics), however it's not pushing data to Prometheus, but rather waits to be pulled.
+            </p>
+        </section>
+
+        <section class="slide aligncenter">
+            <h3>
+                When it is needed?
+            </h3>
+            <div class="wrap-50">
+                <p class="text-intro">
+                    When you need power of Proactive monitoring, but need to have full control over your resources like in Reactive approach.<br />
+                    Origins @ Google.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                <strong>Alerting</strong>
+            </h2>
+            <p class="text-intro">
+                A short intro
+            </p>
+          </div>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                Types of Alerting
+            </h2>
+            <p class="text-intro">
+                Just like monitoring, it can be Reactive and Proactive.
+            </p>
+          </div>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                Proactive Alerting
+            </h2>
+            <p class="text-intro">
+                You need Proactive alerting in cases when <strong>EACH</strong> failed event could result in significant loss for the company.
+                The most powerful, however needed only in specific Business cases. <br />
+
+                TL;DR; Go to 
+
+                        <a rel="external" href="http://riemann.io" title="Riemann">
+                                      <em>http://riemann.io</em>
+                        </a>
+
+            </p>
+          </div>
+        </section>
+
+
+        <section class="bg-primary aligncenter">
+          <div class="wrap">
+            <h2>
+                Reactive Alerting
+            </h2>
+            <p class="text-intro">
+                Graphite API allows you to pass query and returns JSON with data. It is quite easy to homebrew alerting solution...<br/>
+                Aaaaand.... <br/>
+                Lots of people did.<br />
+                However, Grafana started offering Alerting solution recently. It became no-brainer to choose it
+                <svg class="fa-smile-o">
+                    <use xlink:href="#fa-smile-o"></use>
+                </svg>
+
+
+            </p>
+
+            <figure>
+                <img src="images/alerting.png" alt="alerting"/>
+            </figure>
+          </div>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Questions?</h2>
+        </section>
+
+        <section class="bg-primary aligncenter">
+            <h2>Thank you!</h2>
+        </section>
+
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="WebSlides/static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="WebSlides/static/js/svg-icons.js"></script>
+
+  </body>
+</html>
